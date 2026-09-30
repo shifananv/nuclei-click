@@ -1,4 +1,4 @@
-# Nuclei CLICK
+# Nuclei-CLICK
 
 A browser dashboard for [Nuclei](https://github.com/projectdiscovery/nuclei) that
 replaces manual YAML/CLI usage with a click-to-select template catalog,
