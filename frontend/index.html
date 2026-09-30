@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuclei GUI</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <h1>Nuclei GUI</h1>
+    <div id="nuclei-status" class="badge">checking nuclei...</div>
+  </header>
+
+  <main>
+    <section class="panel" id="target-panel">
+      <h2>1. Target</h2>
+      <input id="target-input" type="text" placeholder="https://example.com or 192.168.1.10" />
+      <div id="selected-count" class="muted">0 templates selected</div>
+      <button id="run-btn" disabled>Run Scan</button>
+      <button id="sync-btn">Sync official templates</button>
+      <label class="upload-label">
+        Upload custom template
+        <input id="upload-input" type="file" accept=".yaml,.yml" hidden />
+      </label>
+      <div id="sync-status" class="muted"></div>
+    </section>
+
+    <section class="panel" id="template-panel">
+      <h2>2. Templates (click to select)</h2>
+      <div class="filters">
+        <input id="search-input" type="text" placeholder="search name / id / description" />
+        <select id="severity-select">
+          <option value="">all severities</option>
+          <option value="critical">critical</option>
+          <option value="high">high</option>
+          <option value="medium">medium</option>
+          <option value="low">low</option>
+          <option value="info">info</option>
+        </select>
+        <select id="tag-select">
+          <option value="">all tags</option>
+        </select>
+        <select id="source-select">
+          <option value="">official + custom</option>
+          <option value="official">official only</option>
+          <option value="custom">custom only</option>
+        </select>
+      </div>
+      <div id="template-list" class="template-list"></div>
+    </section>
+
+    <section class="panel" id="results-panel">
+      <h2>3. Live output</h2>
+      <div id="console" class="console"></div>
+      <h3>Findings</h3>
+      <div id="findings" class="findings"></div>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
