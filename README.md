@@ -83,3 +83,12 @@ same searchable catalog immediately.
    retrievable via `GET /api/scan/{scan_id}/results`.
 
 
+## Disclaimer
+
+This repository is intended strictly for educational, research, and authorized security testing purposes only.
+
+Any tools, techniques, proof-of-concept code, or information provided here should only be used on systems, applications, or environments for which you have explicit authorization.
+
+The author assumes no responsibility or liability for any misuse, damage, data loss, unauthorized access, or legal consequences resulting from the use of this repository or its contents.
+
+By using this repository, you acknowledge that you are solely responsible for your actions and agree to comply with all applicable laws, regulations, and responsible disclosure practices.
